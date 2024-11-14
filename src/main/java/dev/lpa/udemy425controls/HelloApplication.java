@@ -23,13 +23,13 @@ public class HelloApplication extends Application {
 
     Scene scene = new Scene(root, 1000, 550); // Double the initial size
 
-    // Adjust translation after the scene is laid out
-    scene.widthProperty().addListener((obs, oldVal, newVal) -> {
-      root.setTranslateX((newVal.doubleValue() - root.getWidth() * magnification) / magnification);
-    });
-    scene.heightProperty().addListener((obs, oldVal, newVal) -> {
-      root.setTranslateY((newVal.doubleValue() - root.getHeight() * magnification) / magnification);
-    });
+//    // Adjust translation after the scene is laid out
+//    scene.widthProperty().addListener((obs, oldVal, newVal) -> {
+//      root.setTranslateX((newVal.doubleValue() - root.getWidth() * magnification) / magnification);
+//    });
+//    scene.heightProperty().addListener((obs, oldVal, newVal) -> {
+//      root.setTranslateY((newVal.doubleValue() - root.getHeight() * magnification) / magnification);
+//    });
 
     // Initial translation adjustment
     root.setTranslateX((scene.getWidth() - root.getWidth() * magnification) / magnification);
