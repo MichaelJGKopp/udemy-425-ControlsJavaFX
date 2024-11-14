@@ -25,6 +25,8 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Accordion?>
 <GridPane fx:controller="dev.lpa.udemy425controls.HelloController"
           xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
@@ -61,7 +63,7 @@
         <CheckBox text="Cat"/>
         <CheckBox text="Bird"/>
     </VBox>
-<!--  ToggleGroup if you want only one activated at a time  -->
+    <!--  ToggleGroup if you want only one activated at a time  -->
     <HBox GridPane.rowIndex="0" GridPane.columnIndex="4">
         <ToggleButton text="Toggle Me"/>
         <ToggleButton text="Toggle Me"/>
@@ -73,7 +75,7 @@
 
     <ComboBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2" editable="false">
         <items>
-            <FXCollections fx:factory="observableArrayList" >
+            <FXCollections fx:factory="observableArrayList">
                 <String fx:value="This is Option 1"/>
                 <String fx:value="This is Option 2"/>
                 <String fx:value="This is Option 3"/>
@@ -97,13 +99,26 @@
             </FXCollections>
         </items>
     </ChoiceBox>
-<!--  can make Slider vertical by setting property  -->
+    <!--  can make Slider vertical by setting property  -->
     <Slider GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
-    showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true" orientation="HORIZONTAL"/>
+            showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true" orientation="HORIZONTAL"/>
 
     <Spinner GridPane.rowIndex="5" GridPane.columnIndex="0" min="0" max="100" editable="true" initialValue="50"/>
 
     <ColorPicker GridPane.rowIndex="5" GridPane.columnIndex="1"/>
 
     <DatePicker GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+    <Accordion GridPane.rowIndex="5" GridPane.columnIndex="3" GridPane.columnSpan="2" expandedPane="$tp2">
+        <panes>
+            <TitledPane text="Titled Pane 1">
+                <Label text="Label in titled pane"/>
+            </TitledPane>
+            <TitledPane fx:id="tp2" text="Titled Pane 2">
+                <Label text="Label in titled pane"/>
+            </TitledPane>
+            <TitledPane fx:id="tp3" text="Titled Pane 3">
+                <Label text="Label in titled pane"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
 </GridPane>
