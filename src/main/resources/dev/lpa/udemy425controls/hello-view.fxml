@@ -20,6 +20,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
+<?import javafx.scene.control.ChoiceBox?>
 <GridPane fx:controller="dev.lpa.udemy425controls.HelloController"
           xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
@@ -80,4 +81,17 @@
             <String fx:value="This is Option 4"/>
         </value>
     </ComboBox>
+
+    <ChoiceBox GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="3">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="cb 1"/>
+                <String fx:value="cb 2"/>
+                <String fx:value="cb 3"/>
+                <String fx:value="cb 4"/>
+                <String fx:value="cb 5"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
 </GridPane>
