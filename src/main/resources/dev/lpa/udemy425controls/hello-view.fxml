@@ -18,5 +18,12 @@
             </ImageView>
         </graphic>
     </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label">
+        <graphic>
+            <ImageView fitWidth="50" fitHeight="50">
+                <Image url="@/info.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
 </GridPane>
 <!--icons8-folder-48.png-->
