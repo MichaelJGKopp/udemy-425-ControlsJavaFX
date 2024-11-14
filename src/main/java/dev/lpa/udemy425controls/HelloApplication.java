@@ -17,23 +17,9 @@ public class HelloApplication extends Application {
     Pane root = fxmlLoader.load();
 
     // Apply scale transformation
-    double magnification = 1.5;
-    Scale scale = new Scale(magnification, magnification, 0, 0);
-    root.getTransforms().add(scale);
+    double magnification = 1;
 
-    Scene scene = new Scene(root, 1000, 550); // Double the initial size
-
-//    // Adjust translation after the scene is laid out
-//    scene.widthProperty().addListener((obs, oldVal, newVal) -> {
-//      root.setTranslateX((newVal.doubleValue() - root.getWidth() * magnification) / magnification);
-//    });
-//    scene.heightProperty().addListener((obs, oldVal, newVal) -> {
-//      root.setTranslateY((newVal.doubleValue() - root.getHeight() * magnification) / magnification);
-//    });
-
-    // Initial translation adjustment
-    root.setTranslateX((scene.getWidth() - root.getWidth() * magnification) / magnification);
-    root.setTranslateY((scene.getHeight() - root.getHeight() * magnification) / magnification);
+    Scene scene = new Scene(root, 1000 * magnification, 500 * magnification); // Double the initial size
 
     stage.setTitle("Hello!");
     stage.setScene(scene);
