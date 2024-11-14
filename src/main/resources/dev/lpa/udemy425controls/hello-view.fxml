@@ -23,6 +23,8 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
 <GridPane fx:controller="dev.lpa.udemy425controls.HelloController"
           xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
@@ -100,4 +102,8 @@
     showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true" orientation="HORIZONTAL"/>
 
     <Spinner GridPane.rowIndex="5" GridPane.columnIndex="0" min="0" max="100" editable="true" initialValue="50"/>
+
+    <ColorPicker GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <DatePicker GridPane.rowIndex="5" GridPane.columnIndex="2"/>
 </GridPane>
