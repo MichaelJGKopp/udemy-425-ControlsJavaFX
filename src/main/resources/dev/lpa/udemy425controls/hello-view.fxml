@@ -16,6 +16,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <GridPane fx:controller="dev.lpa.udemy425controls.HelloController"
           xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
@@ -60,4 +64,20 @@
     </HBox>
 
     <TextField GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="5"/>
+    <PasswordField GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="5"/>
+
+    <ComboBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2" editable="false">
+        <items>
+            <FXCollections fx:factory="observableArrayList" >
+                <String fx:value="This is Option 1"/>
+                <String fx:value="This is Option 2"/>
+                <String fx:value="This is Option 3"/>
+                <String fx:value="This is Option 4"/>
+                <String fx:value="This is Option 5"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="This is Option 4"/>
+        </value>
+    </ComboBox>
 </GridPane>
